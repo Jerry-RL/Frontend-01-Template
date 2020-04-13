@@ -82,6 +82,46 @@
 * 模块：经常被使用的业务区块
   * 登录
 
+## 作业
+
+### URL解析
+> 思路1：使用正则表达式解析
+> 思路2：使用a标签获取属性
+```javascript
+function parseUrl(url) {
+  let aTag = document.createElement('a')
+  aTag.href = url;
+
+  let {
+    protocol, 
+    host, 
+    hostname, 
+    pathname,
+    port,
+    search,
+    hash
+  } = aTag
+  let urlParams = {};
+
+  let queries = search.replace(/^\?/, '').split('&')
+  queries.forEach((query, index) => {
+    let kv = query.split('=')
+    urlParams[kv[0]] = kv[1]
+  })
+  return {
+    protocol, 
+    host, 
+    hostname, 
+    pathname,
+    port,
+    search,
+    urlParams,
+    hash
+  }
+}
+
+```
+
 
 ## 总结及收获
 
