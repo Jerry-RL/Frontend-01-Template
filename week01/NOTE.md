@@ -89,9 +89,11 @@
 > 思路2：使用a标签获取属性
 ```javascript
 function parseUrl(url) {
+// 创建a标签
   let aTag = document.createElement('a')
   aTag.href = url;
 
+// 获取所需url的属性
   let {
     protocol, 
     host, 
@@ -101,13 +103,16 @@ function parseUrl(url) {
     search,
     hash
   } = aTag
-  let urlParams = {};
 
+// 获取url参数 
+  let urlParams = {};
   let queries = search.replace(/^\?/, '').split('&')
   queries.forEach((query, index) => {
     let kv = query.split('=')
     urlParams[kv[0]] = kv[1]
   })
+
+// 返回解析数据
   return {
     protocol, 
     host, 
