@@ -62,7 +62,7 @@ let numberRegex = /^(\.\d+|(0|[1-9]\d*)(\.\d*)?)([eE][-\+]?\d+)?$|^0[bB][01]+$|^
 
 ```
 + 写一个 UTF-8 Encoding 的函数
-
+[utf8js](https://github.com/mathiasbynens/utf8.js/blob/master/utf8.js)
 ```
 function encodeUtf8(text) {
     const code = encodeURIComponent(text);
