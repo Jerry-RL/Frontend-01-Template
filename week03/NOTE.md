@@ -71,7 +71,7 @@
     internal methods
 
     - [[GetOwnProperty]] ( P )
-    -  [[HasProperty]] ( P )
+    - [[HasProperty]] ( P )
     - [[DefineOwnProperty]] ( P, Desc )
     - [[Get]] ( P, Receiver )
     - [[Set]] ( P, V, Receiver )
@@ -93,11 +93,13 @@
     - [[Get]] ( P, Receiver )
     - [[Set]] ( P, V, Receiver )
     - [[Delete]] ( P )
-    -  [[OwnPropertyKeys]] ( )
+    - [[OwnPropertyKeys]] ( )
     - ModuleNamespaceCreate ( module, exports )
 
 -  Immutable Prototype Exotic Objects
 
     inernal methods
+
+> 待完善
 
 ## 总结
