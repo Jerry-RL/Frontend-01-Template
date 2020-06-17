@@ -1,0 +1,11 @@
+<div id="a">
+    123
+    <span>456789</span>
+    0123456789
+</div>
+<script>
+    let el = document.getElementById("a");
+    let range = new Range();
+    range.setStart(el.childNodes[0], 3);
+    range.setEnd(el.childNodes[2], 3);
+</script>
